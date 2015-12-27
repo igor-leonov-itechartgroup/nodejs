@@ -1,12 +1,18 @@
-var user = require('./user');
-function run() {
-var vasya = new user.User("Вася");
-var petya = new user.User("Пётр");
+var db = require("db");
+db.connect();
 
-vasya.hello(petya);
+var User = require('./user');
+
+function run() {
+    var vasya = new User("Вася");
+    var petya = new User("Пётр");
+
+    vasya.hello(petya);
+
+    console.log(db.getPhrase('Run successful'));
 }
 
-if(module.parent) {
+if (module.parent) {
     exports.run = run;
 } else {
     run();
