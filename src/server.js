@@ -1,6 +1,8 @@
 var db = require("db");
 db.connect();
 
+var log = require('./logger')(module);
+
 var User = require('./user');
 
 function run() {
@@ -9,7 +11,7 @@ function run() {
 
     vasya.hello(petya);
 
-    console.log(db.getPhrase('Run successful'));
+    log(db.getPhrase('Run successful'));
 }
 
 if (module.parent) {
