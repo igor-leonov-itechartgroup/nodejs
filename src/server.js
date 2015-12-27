@@ -1,7 +1,7 @@
-require('./user');
+var user = require('./user');
 function run() {
-var vasya = new User("Вася");
-var petya = new User("Пётр");
+var vasya = new user.User("Вася");
+var petya = new user.User("Пётр");
 
 vasya.hello(petya);
 }

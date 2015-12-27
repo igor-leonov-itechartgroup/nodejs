@@ -9,7 +9,7 @@ User.prototype.hello = function(who) {
 
 console.log('USer js required');
 
-//exports.User = User;
-global.User = User;
+exports.User = User;
+//global.User = User;
 
-console.log(module);
+//console.log(module);
